@@ -1,8 +1,8 @@
 package verification;
 
-import java.util.ArrayList;
-
 import com.microsoft.z3.Context;
+
+import java.util.ArrayList;
 
 /**
  * A class containing parameters that are passed onto the verification calls.

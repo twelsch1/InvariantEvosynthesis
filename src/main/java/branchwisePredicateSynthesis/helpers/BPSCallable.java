@@ -1,10 +1,10 @@
 package branchwisePredicateSynthesis.helpers;
 
-import java.util.concurrent.Callable;
-
 import benchmark.Benchmark;
 import branchwisePredicateSynthesis.BranchwisePredicateSynthesis;
 import synthesizer.Synthesizer;
+
+import java.util.concurrent.Callable;
 
 /**
  * 

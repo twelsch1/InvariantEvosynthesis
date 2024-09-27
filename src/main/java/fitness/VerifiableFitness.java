@@ -1,9 +1,6 @@
 package fitness;
 
-import java.util.ArrayList;
-
 import ec.gp.koza.KozaFitness;
-import verification.TestExample;
 
 public class VerifiableFitness extends KozaFitness {
 

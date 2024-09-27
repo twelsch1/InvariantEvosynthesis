@@ -1,13 +1,5 @@
 package evoSynthesis;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.time.Duration;
-import java.time.Instant;
-import java.util.ArrayList;
-import java.util.Collections;
-
 import benchmark.Benchmark;
 import ec.EvolutionState;
 import ec.Evolve;
@@ -21,6 +13,14 @@ import synthesizer.SynthesisResult;
 import synthesizer.Synthesizer;
 import verification.TestExample;
 import verification.Verifier;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.time.Duration;
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class GPPredicateSynthesizer extends Synthesizer {
 	

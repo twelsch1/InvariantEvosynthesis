@@ -1,8 +1,8 @@
 package optional;
 
-import java.util.ArrayList;
-
 import verification.TestExample;
+
+import java.util.ArrayList;
 
 /**
  * 

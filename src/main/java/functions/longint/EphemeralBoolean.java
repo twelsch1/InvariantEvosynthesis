@@ -5,11 +5,7 @@ package functions.longint;
 import datatypes.LongData;
 import ec.EvolutionState;
 import ec.Problem;
-import ec.gp.ADFStack;
-import ec.gp.ERC;
-import ec.gp.GPData;
-import ec.gp.GPIndividual;
-import ec.gp.GPNode;
+import ec.gp.*;
 import ec.util.Code;
 import ec.util.DecodeReturn;
 

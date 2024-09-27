@@ -6,12 +6,14 @@
 
 
 package ecjSimple;
-import java.util.ArrayList;
 
 import ec.*;
-import ec.util.*;
+import ec.simple.SimpleProblemForm;
+import ec.util.Parameter;
+import ec.util.ThreadPool;
 import evoSynthesis.CLIAProblem;
-import ec.simple.*;
+
+import java.util.ArrayList;
 
 /* 
  * SimpleEvaluator.java

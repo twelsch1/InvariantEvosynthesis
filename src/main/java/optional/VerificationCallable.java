@@ -1,12 +1,12 @@
 package optional;
 
-import java.util.ArrayList;
-import java.util.concurrent.Callable;
-
 import verification.TestExample;
 import verification.VerificationCallParameters;
 import verification.VerificationResult;
 import verification.Verifier;
+
+import java.util.ArrayList;
+import java.util.concurrent.Callable;
 
 /**
  * An optional implementation of a Callable that can be used to make verification calls in parallel.

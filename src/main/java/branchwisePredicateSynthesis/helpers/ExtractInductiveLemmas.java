@@ -1,9 +1,9 @@
 package branchwisePredicateSynthesis.helpers;
 
-import java.util.HashSet;
-
 import utils.Utils;
 import verification.Verifier;
+
+import java.util.HashSet;
 
 
 public class ExtractInductiveLemmas {

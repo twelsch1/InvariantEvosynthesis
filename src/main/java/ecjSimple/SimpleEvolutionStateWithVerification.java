@@ -1,13 +1,13 @@
 package ecjSimple;
 
-import java.util.ArrayList;
-
 import ec.EvolutionState;
 import ec.Individual;
 import ec.Subpopulation;
 import ec.util.Checkpoint;
 import verification.TestExample;
 import verification.Verifier;
+
+import java.util.ArrayList;
 
 /* 
  * SimpleEvolutionState.java
@@ -158,7 +158,7 @@ public class SimpleEvolutionStateWithVerification extends EvolutionState
         evaluator.evaluatePopulation(this);
 
         // LOCAL STATE UPDATES (used by some algorithms like ACO or EDAs to update auxiliary state
-        // SimpleEvolutionState executes all the "local" updates in a batch—-so it's really a kind of "global" update
+        // SimpleEvolutionState executes all the "local" updates in a batch, so it's really a kind of "global" update
         // See SteadyStateEvolutionState for true local state updates
         for (int i = 0; i < this.population.subpops.size(); i++)
             {

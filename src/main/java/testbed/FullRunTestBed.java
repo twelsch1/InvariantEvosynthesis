@@ -1,5 +1,11 @@
 package testbed;
 
+import benchmark.Benchmark;
+import branchwisePredicateSynthesis.BranchwisePredicateSynthesis;
+import evoSynthesis.GPPredicateSynthesizer;
+import synthesizer.SynthesisParameters;
+import synthesizer.Synthesizer;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -7,20 +13,14 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
 
-import benchmark.Benchmark;
-import branchwisePredicateSynthesis.BranchwisePredicateSynthesis;
-import evoSynthesis.GPPredicateSynthesizer;
-import synthesizer.SynthesisParameters;
-import synthesizer.Synthesizer;
-
 public class FullRunTestBed {
 
 	public static void runExperiments(String outputName) throws Exception {
 		
-		//String directory = "src/main/resources/SMTBenchmarks/";
+		String directory = "src/main/resources/SMTBenchmarks/";
 
 
-		String directory = "src/main/resources/EasyInvariantBenchmarks/";
+		//String directory = "src/main/resources/EasyInvariantBenchmarks/";
 
 		ArrayList<String> benchmarkNames = new ArrayList<>();
 		File[] files = new File(directory).listFiles();

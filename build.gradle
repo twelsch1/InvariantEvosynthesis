@@ -35,9 +35,17 @@ dependencies {
   // https://mvnrepository.com/artifact/com.microsoft.z3/libz3java.win
 //implementation group: 'com.microsoft.z3', name: 'libz3java.win', version: '4.8.8'
 
-implementation 'io.github.tudo-aqua:z3-turnkey:4.8.10'
+    implementation 'io.github.tudo-aqua:z3-turnkey:4.8.10'
 
-  	
+    //implementation files('src/main/resources/ecj-27.jar')
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
+
+
+
+
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 }

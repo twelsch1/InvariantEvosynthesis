@@ -1,9 +1,9 @@
 package evoSynthesis;
 
-import java.util.ArrayList;
-
 import ec.util.Parameter;
 import ec.util.ParameterDatabase;
+
+import java.util.ArrayList;
 
 public class ParamsHelper {
 

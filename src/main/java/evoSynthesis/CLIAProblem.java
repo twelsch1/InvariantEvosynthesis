@@ -1,12 +1,7 @@
 package evoSynthesis;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-
 import com.microsoft.z3.Status;
-
 import datatypes.LongData;
 import ec.EvolutionState;
 import ec.Fitness;
@@ -19,11 +14,11 @@ import ec.util.Parameter;
 import ecjSimple.SimpleEvolutionStateWithVerification;
 import fitness.VerifiableFitness;
 import optional.ICEManager;
-import verification.TestExample;
-import verification.VerificationCallParameters;
-import verification.VerificationException;
-import verification.VerificationResult;
-import verification.Verifier;
+import verification.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 
 
 @SuppressWarnings("serial")
