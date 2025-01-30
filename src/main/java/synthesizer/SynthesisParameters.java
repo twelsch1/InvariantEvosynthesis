@@ -1,10 +1,5 @@
 package synthesizer;
 
-/**
- * 
- * @author Thomas Welsch
- *
- */
 public class SynthesisParameters {
 	
 	//These are the default values, only constructor is the default one

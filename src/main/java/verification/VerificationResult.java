@@ -4,11 +4,7 @@ import com.microsoft.z3.Status;
 
 import java.util.ArrayList;
 
-/**
- * A POJO used to convey the outcome of verification. Contains the Z3 status of the verification call, a CounterExample if one was obtained, and an Exception if one was encountered. 
- * @author Thomas Welsch
- *
- */
+
 public class VerificationResult {
 
 	/**

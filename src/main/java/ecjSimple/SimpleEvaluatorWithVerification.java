@@ -33,8 +33,7 @@ import java.util.ArrayList;
  *
  * Thanks to Ralf Buschermohle <lobequadrat@googlemail.com> for early versions
  * of code which led to this version.
- * 
- * Very slight modifications made by Welsch in 2022 to support verification.
+ *
  *
  */
 

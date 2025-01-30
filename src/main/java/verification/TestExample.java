@@ -2,11 +2,7 @@ package verification;
 
 import java.util.ArrayList;
 
-/**
- * A class that holds input/output examples, and contains utility functions for handling them. 
- * @author Thomas Welsch
- *
- */
+
 public class TestExample {
 	/**
 	 * Array that holds function inputs.

@@ -1,10 +1,6 @@
 package verification;
 
-/**
- * A custom Exception used by the Verifier class. If this Exception is seen means an error was encountered during verification.
- * @author Thomas Welsch
- *
- */
+
 public class VerificationException extends Exception {
 
 	private static final long serialVersionUID = -4910213921113744412L;

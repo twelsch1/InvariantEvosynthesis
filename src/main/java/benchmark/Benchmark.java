@@ -6,11 +6,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 
-/**
- * 
- * @author Thomas Welsch
- *
- */
 public class Benchmark {
 
 	private String fullFile;

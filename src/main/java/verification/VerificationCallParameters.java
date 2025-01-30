@@ -4,11 +4,7 @@ import com.microsoft.z3.Context;
 
 import java.util.ArrayList;
 
-/**
- * A class containing parameters that are passed onto the verification calls.
- * @author Thomas Welsch
- *
- */
+
 public class VerificationCallParameters {
 
 	/**

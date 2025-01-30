@@ -36,8 +36,7 @@ import java.util.ArrayList;
  *
  * @author Sean Luke
  * @version 1.0 
- * 
- * Very slight modifications made by Welsch in 2022 to support verification.
+ *
  */
 
 public class SimpleEvolutionStateWithVerification extends EvolutionState

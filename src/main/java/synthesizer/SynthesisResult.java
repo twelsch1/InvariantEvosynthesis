@@ -1,10 +1,6 @@
 package synthesizer;
 
-/**
- * 
- * @author Thomas Welsch
- *
- */
+
 public class SynthesisResult {
 
 	private boolean successful = false;

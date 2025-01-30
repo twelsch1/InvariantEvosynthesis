@@ -12,11 +12,6 @@ import verification.Verifier;
 
 import java.util.ArrayList;
 
-/**
- * 
- * @author Thomas Welsch
- *
- */
 public class OrwisePredicateSynthesis {
 
 	//we should restore to 20 at some point, but let's check it at 5 for now.

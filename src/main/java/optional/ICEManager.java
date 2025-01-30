@@ -4,11 +4,6 @@ import verification.TestExample;
 
 import java.util.ArrayList;
 
-/**
- * 
- * @author Thomas Welsch
- *
- */
 public class ICEManager {
 
 

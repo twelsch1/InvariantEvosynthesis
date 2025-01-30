@@ -8,11 +8,6 @@ import verification.Verifier;
 import java.util.ArrayList;
 import java.util.concurrent.Callable;
 
-/**
- * An optional implementation of a Callable that can be used to make verification calls in parallel.
- * @author Thomas Welsch
- *
- */
 public class VerificationCallable implements Callable<VerificationResult>  {
 
 	/**

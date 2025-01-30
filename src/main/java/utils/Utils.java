@@ -1,10 +1,6 @@
 package utils;
 
-/**
- * A utilities class containing string manipulation, modification and extraction methods.
- * @author Thomas Welsch
- *
- */
+
 public class Utils {
 	
 
