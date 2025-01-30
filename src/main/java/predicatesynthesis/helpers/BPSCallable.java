@@ -1,7 +1,7 @@
-package branchwisePredicateSynthesis.helpers;
+package predicatesynthesis.helpers;
 
 import benchmark.Benchmark;
-import branchwisePredicateSynthesis.BranchwisePredicateSynthesis;
+import predicatesynthesis.BranchwisePredicateSynthesis;
 import synthesizer.Synthesizer;
 
 import java.util.concurrent.Callable;

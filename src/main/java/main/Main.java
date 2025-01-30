@@ -1,8 +1,9 @@
 package main;
 
 import benchmark.Benchmark;
-import branchwisePredicateSynthesis.BranchwisePredicateSynthesis;
-import evoSynthesis.GPPredicateSynthesizer;
+import predicatesynthesis.BranchwisePredicateSynthesis;
+import evosynthesis.GPPredicateSynthesizer;
+import predicatesynthesis.OrwisePredicateSynthesis;
 import synthesizer.SynthesisParameters;
 import synthesizer.Synthesizer;
 import verification.Verifier;
@@ -16,18 +17,22 @@ public class Main {
 			System.exit(0);
 		}*/
 		
-		String predSynthFile = "src/main/resources/booleanchildsilent.params";
+		String predSynthFile = "src/main/resources/booleanchild.params";
 	
 		
 		/*if (args.length > 0) {
 			predSynthFile = args[1];
 		}*/
 		//String benchmarkFile = args[0];
-		String benchmarkFile = "src/main/resources/SMTBenchmarks/6.c.smt";
+		//String benchmarkFile = "src/main/resources/SMTBenchmarks/6.c.smt";
 		
 		//String benchmarkFile = "src/main/resources/EasyInvariantBenchmarks/jmbl_ex11_vars-new.sl";
 		//String benchmarkFile = "src/main/resources/EasyInvariantBenchmarks/jmbl_hola.20.sl";
-		//String benchmarkFile = "src/main/resources/HardInvariantBenchmarks/fib_32.sl";
+		//String benchmarkFile = "src/main/resources/SolvedHardInvariantBenchmarks/cars.sl";
+		//nl-4 caused an issue when trying to retrieve initial examples, was taking a long time and seemed to not converge on 6 and 7. Possibly,
+		//nl-4 is trivial but idk. Note they failed to solve two of these, and possibility of unsat.
+		//THis is an interesting topic for later.
+		String benchmarkFile = "src/main/resources/NLBenchmarks/nl-6.c.smt";
 		
 		Benchmark benchmark = Benchmark.parseBenchmark(benchmarkFile);
 
@@ -38,7 +43,7 @@ public class Main {
 		//sp.setTimeout(2);
 		//SynthesisResult result = SynthesisMethods.CEGIS(partialsSynthesizer, benchmark);
 		BranchwisePredicateSynthesis job = new BranchwisePredicateSynthesis();
-		
+		//OrwisePredicateSynthesis job = new OrwisePredicateSynthesis();
 		while (!job.isSynthesisFinished()) {
 			job.run(benchmark, predicateSynthesizer, true, "RBPS");
 		}

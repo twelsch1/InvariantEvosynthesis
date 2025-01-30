@@ -1,4 +1,4 @@
-package evoSynthesis;
+package evosynthesis;
 
 import ec.util.Parameter;
 import ec.util.ParameterDatabase;

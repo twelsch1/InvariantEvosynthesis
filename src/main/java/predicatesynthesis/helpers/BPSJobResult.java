@@ -1,6 +1,6 @@
-package branchwisePredicateSynthesis.helpers;
+package predicatesynthesis.helpers;
 
-import branchwisePredicateSynthesis.BranchwisePredicateSynthesis;
+import predicatesynthesis.BranchwisePredicateSynthesis;
 
 /**
  * 

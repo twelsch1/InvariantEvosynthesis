@@ -16,13 +16,13 @@ evalthreads = 1
 verificationthreads = 1
 breedthreads = 1
 silent=true
-
+checkice=true
 
 #select.tournament.size = 7
 
 #jobs = 10
 
-eval.problem = evoSynthesis.CLIAProblem
+eval.problem = evosynthesis.CLIAProblem
 eval.problem.data = datatypes.LongData
 
 # output statistics to the file "out.stat" in the directory

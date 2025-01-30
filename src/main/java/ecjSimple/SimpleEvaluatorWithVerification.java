@@ -11,7 +11,7 @@ import ec.*;
 import ec.simple.SimpleProblemForm;
 import ec.util.Parameter;
 import ec.util.ThreadPool;
-import evoSynthesis.CLIAProblem;
+import evosynthesis.CLIAProblem;
 
 import java.util.ArrayList;
 

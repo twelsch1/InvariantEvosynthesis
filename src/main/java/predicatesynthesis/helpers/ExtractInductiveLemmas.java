@@ -1,4 +1,4 @@
-package branchwisePredicateSynthesis.helpers;
+package predicatesynthesis.helpers;
 
 import utils.Utils;
 import verification.Verifier;

@@ -8,7 +8,7 @@ import ec.gp.GPData;
 import ec.gp.GPIndividual;
 import ec.gp.GPNode;
 import ecjSimple.SimpleEvolutionStateWithVerification;
-import evoSynthesis.CLIAProblem;
+import evosynthesis.CLIAProblem;
 
 @SuppressWarnings("serial")
 public class Var extends GPNode {

@@ -1,4 +1,4 @@
-package evoSynthesis;
+package evosynthesis;
 
 import benchmark.Benchmark;
 import ec.EvolutionState;
@@ -28,6 +28,7 @@ public class GPPredicateSynthesizer extends Synthesizer {
 	private Benchmark benchmark;
 	private String[] runConfig;
 	private int maxAttempts = 1000;
+	//private int maxAttempts = 1;
 	private int timeout = 5;
 	
 	
@@ -96,9 +97,9 @@ public class GPPredicateSynthesizer extends Synthesizer {
 		
 		ArrayList<TestExample> ces = null;
 		int initFrequency = 2;
-		
+		int generations = 0;
 		Instant start = Instant.now();
-		
+		//System.out.println(maxAttempts);
 		for (int i = 0; i < maxAttempts; i++) {
 			
 		//System.out.println("GP Attempt " + (i+1));
@@ -117,23 +118,27 @@ public class GPPredicateSynthesizer extends Synthesizer {
 
 
 		int result = EvolutionState.R_NOTDONE;
+		int currentGen = 0;
 		while( result == EvolutionState.R_NOTDONE ) {
 			result = evaluatedState.evolve();
+			currentGen = evaluatedState.generation;
 		}
 		
     	ArrayList<Individual> individuals = new ArrayList<>();
 	    individuals.addAll(evaluatedState.population.subpops.get(0).individuals);	    
 		if (result == EvolutionState.R_SUCCESS) {
-			return new SynthesisResult(true, extractCorrectProgram(individuals));
+			return new SynthesisResult(true, extractCorrectProgram(individuals), 0, generations+currentGen+1);
 		}
-		
+
+		generations += evaluatedState.numGenerations;
 		Instant end = Instant.now();
 		if (Duration.between(start, end).toMinutes() >= timeout) {
 			return new SynthesisResult(false, "");
 		}
 		
-		
+
 		if (i == maxAttempts-1) {
+		//	System.out.println("Resetting");
 		    Collections.sort(individuals);
 			GPIndividual ind = (GPIndividual) individuals.get(0);
 			return new SynthesisResult(false,ind.trees[0].child.makeLispTree());

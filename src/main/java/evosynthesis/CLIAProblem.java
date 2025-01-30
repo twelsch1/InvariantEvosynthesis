@@ -1,4 +1,4 @@
-package evoSynthesis;
+package evosynthesis;
 
 
 import com.microsoft.z3.Status;
@@ -69,7 +69,7 @@ public class CLIAProblem extends GPProblem implements SimpleProblemForm  {
         }
         
         silent = state.parameters.getBoolean(new Parameter("silent"), new Parameter("silent"), false);
-        //checkICE = state.parameters.getBoolean(new Parameter("checkice"), new Parameter("checkice"), false);
+        checkICE = state.parameters.getBoolean(new Parameter("checkice"), new Parameter("checkice"), false);
 
         //if (!checkICE) {
         	//System.out.println("Hello");
@@ -85,7 +85,7 @@ public class CLIAProblem extends GPProblem implements SimpleProblemForm  {
     
 	public void evaluate(final EvolutionState state, final Individual ind, final int subpopulation,
 			final int threadnum) {
-		if (!ind.evaluated) { // don't bother reevaluating if evaluated on a previous generation, wasn't
+	//	if (!ind.evaluated) { // don't bother reevaluating if evaluated on a previous generation, wasn't
 								// perfect anyway and would add overhead.
 
 			//String checkMe = ((GPIndividual) ind).trees[0].child.makeLispTree();
@@ -187,6 +187,9 @@ public class CLIAProblem extends GPProblem implements SimpleProblemForm  {
 			// as 0 means ideal while higher means worse for standardizedFitness.
 
 			//Note, at the end of these processes these "sums" are fractions, but whatever.
+
+		   if (checkICE) {
+			//System.out.println("Doing Check ICE");
 			if (numPositives != 0) {
 				positiveSum = 1 - ((numPositives - positiveSum) / numPositives);
 			}
@@ -204,11 +207,15 @@ public class CLIAProblem extends GPProblem implements SimpleProblemForm  {
 			// we take the fitness as the highest of the three i.e. the worst
 			// performing
 
-			// sum becomes worst of pos/neg
-			sum = positiveSum > negativeSum ? positiveSum : negativeSum;
+			// sum becomes worst of pos/neg/impsSum
+			sum = Math.max(Math.max(positiveSum, negativeSum), impsSum);
+		   } else {
+			   sum = 1 - ((numImps+numNegatives+numPositives-impsSum-negativeSum-positiveSum) / (numImps+numNegatives+numPositives));
+		   }
+
 
 			// sum becomes worst of pos/neg/impsSum
-			sum = sum > impsSum ? sum : impsSum;
+			//sum = Math.max(sum, impsSum);
 
 			f.setStandardizedFitness(state, sum);
 			f.hits = hits;
@@ -218,7 +225,7 @@ public class CLIAProblem extends GPProblem implements SimpleProblemForm  {
 				SimpleEvolutionStateWithVerification st = (SimpleEvolutionStateWithVerification) state;
 				st.setInterrupted(true);
 			}
-		}
+	//	}
 	}
 
     public void verifyPopulation(ArrayList<Individual> individuals, boolean add, int maxTestsAllowed,

@@ -11,6 +11,8 @@ public class SynthesisResult {
 	private String programFound;
 	private long timeTaken = 0;
 	private String split;
+	private int numGenerations = -1;
+	private String benchmark;
 
 	
 	
@@ -34,7 +36,16 @@ public class SynthesisResult {
 		this.programFound = programFound;
 		this.timeTaken = timeTaken;
 	}
-	
+
+	public SynthesisResult(boolean wasSuccessful, String programFound, long timeTaken, int numGenerations) {
+
+		this.successful = wasSuccessful;
+		this.programFound = programFound;
+		this.timeTaken = timeTaken;
+		this.numGenerations = numGenerations;
+	}
+
+
 
 	public boolean isSuccessful() {
 		return successful;
@@ -60,9 +71,25 @@ public class SynthesisResult {
 	public void setSplit(String split) {
 		this.split = split;
 	}
-	
+
+	public String getBenchmark() {
+		return benchmark;
+	}
+
+	public void setBenchmark(String benchmark) {
+		this.benchmark = benchmark;
+	}
+
+	public int getNumGenerations() {
+		return numGenerations;
+	}
+
+	public void setNumGenerations(int numGenerations) {
+		this.numGenerations = numGenerations;
+	}
+
 	public String asResultString() {
-		return this.successful + "," + this.timeTaken + "," + this.programFound.length();
+		return this.benchmark + "," + this.successful + "," + this.timeTaken + "," + this.numGenerations + "\n";
 	}
 
 	

@@ -10,14 +10,13 @@ gp.fs.0.name = f0
 #was 1024
 pop.subpop.0.size = 2500
 
-#Remember to reset to 25
+
 generations = 25
 evalthreads = 1
 verificationthreads = 1
 breedthreads = 1
-silent=false
-checkICE=true
-
+silent=true
+checkice=false
 
 #select.tournament.size = 7
 
